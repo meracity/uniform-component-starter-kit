@@ -35,7 +35,6 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
   animationPreview,
   delay = 'none',
   styles,
-
 }) => {
   const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
 
