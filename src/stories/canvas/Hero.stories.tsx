@@ -42,6 +42,8 @@ const BASE_PROPS: Omit<HeroProps, 'component' | 'children'> = {
   paddingTop: PaddingSize.Medium,
   paddingBottom: PaddingSize.Medium,
   textColorVariant: 'Dark',
+  secondaryImage:
+    'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
 };
 
 const argTypes = {

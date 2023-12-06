@@ -35,6 +35,7 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
   animationPreview,
   delay = 'none',
   styles,
+  secondaryImage,
 }) => {
   const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
 
@@ -63,7 +64,7 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
         })}
       >
         <BackgroundImage
-          image={image}
+          image={secondaryImage === undefined || secondaryImage.length === 0 ? image : secondaryImage}
           video={video}
           objectFit={objectFit}
           overlayColor={overlayColor}
