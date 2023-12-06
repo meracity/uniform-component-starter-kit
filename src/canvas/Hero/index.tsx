@@ -44,6 +44,7 @@ export type HeroProps = ComponentProps<
     delay?: Types.AnimationDelay;
     animationPreview?: boolean;
     styles?: Styles;
+    secondaryImage?: string;
   }
 >;
 
