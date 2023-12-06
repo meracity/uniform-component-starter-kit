@@ -1,6 +1,84 @@
 {
   "project": {
-    "pz": {},
+    "pz": {
+      "enr": {
+        "1": {
+          "cap": 100
+        }
+      },
+      "sig": {
+        "hasvisited": {
+          "str": 2,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "PVC",
+                "match": {
+                  "op": ">",
+                  "rhs": 1
+                }
+              }
+            ]
+          }
+        },
+        "hasVisited2": {
+          "str": 50,
+          "cap": 100,
+          "dur": "s",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "path": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "/about"
+                },
+                "type": "PV"
+              },
+              {
+                "type": "PVC",
+                "match": {
+                  "op": ">",
+                  "rhs": 2
+                }
+              }
+            ]
+          }
+        },
+        "recipeViews": {
+          "str": 2,
+          "cap": 10,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "path": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "/recipes"
+                },
+                "type": "PV"
+              },
+              {
+                "type": "PVC",
+                "match": {
+                  "op": ">",
+                  "rhs": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
     "test": {}
   }
 }

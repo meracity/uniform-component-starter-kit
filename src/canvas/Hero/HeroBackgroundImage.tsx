@@ -35,6 +35,7 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
   animationPreview,
   delay = 'none',
   styles,
+  secondaryImage
 }) => {
   const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
 
@@ -63,13 +64,12 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
         })}
       >
         <BackgroundImage
-          image={image}
+          image={secondaryImage[0]===undefined? image : secondaryImage}
           video={video}
           objectFit={objectFit}
           overlayColor={overlayColor}
           overlayOpacity={overlayOpacity}
         />
-
         <div className={classNames('flex flex-col mx-1 md:mx-10 z-20')}>
           <ElementWrapper
             duration={duration}

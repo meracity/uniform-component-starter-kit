@@ -39,6 +39,8 @@ import './Spacer';
 import './Testimonial';
 import './Video';
 import './UnorderedList';
+import './RecipeBody';
+import './RedditSearch';
 
 export { default as Accordion } from './Accordion';
 

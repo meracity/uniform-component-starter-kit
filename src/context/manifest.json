@@ -19,16 +19,8 @@
                 "type": "PVC",
                 "match": {
                   "op": ">",
-                  "rhs": 2
+                  "rhs": 1
                 }
-              },
-              {
-                "path": {
-                  "cs": false,
-                  "op": "=",
-                  "rhs": "/about"
-                },
-                "type": "PV"
               }
             ]
           }
@@ -54,6 +46,32 @@
                 "match": {
                   "op": ">",
                   "rhs": 2
+                }
+              }
+            ]
+          }
+        },
+        "recipeViews": {
+          "str": 2,
+          "cap": 10,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "path": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "/recipes"
+                },
+                "type": "PV"
+              },
+              {
+                "type": "PVC",
+                "match": {
+                  "op": ">",
+                  "rhs": 1
                 }
               }
             ]

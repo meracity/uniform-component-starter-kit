@@ -1,6 +1,6 @@
 /* eslint-disable */
 // @ts-nocheck
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { registerUniformComponent, ComponentProps } from '@uniformdev/canvas-react';
 import { getTextClass } from '@/utils/styling';
@@ -10,6 +10,7 @@ export type Props = ComponentProps<{
   source: string;
   title: string;
   description: string;
+  data1: object;
 }>;
 
 const UnorderedList: FC<Props> = ({
@@ -18,13 +19,17 @@ const UnorderedList: FC<Props> = ({
   data
   
 }) => {
-    var myString = text.split(', ');
-    
+    var myString;
+    text? myString = text.split(', '): null;
+
+
+  
+
   return (
     <div className='unordered-list'>
         <h1>{title}</h1>
         <ul>
-            {myString.map((item) => {return(<li>{item}</li>)})}
+            {text? myString.map((item) => {return(<li>{item}</li>)}): null}
         </ul>
         <div>
           <ul>
